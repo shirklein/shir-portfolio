@@ -1,0 +1,16 @@
+.DS_Store
+.agents/
+.claude/
+skills-lock.json
+*.skill
+
+# Astro workshop scaffold — separate project, not part of this site
+shir-ben-tolila-portfolio/
+
+# Unused source photo, not referenced by the site
+Profil picture/
+
+# Large raw video files superseded by the compressed versions actually used on the site
+Darrow/סופי עם כתוביות עם רקע שחור.mov
+Darrow/פרק 2 עם כתוביות ותיקונים סופי.mp4
+Shutafot Lasherut/
