@@ -5,6 +5,7 @@ document.querySelectorAll('.video-gallery').forEach(function(gallery){
 
   var stageVideo = lightbox.querySelector('.lightbox-stage video');
   var stageSource = stageVideo.querySelector('source');
+  var stageImg = lightbox.querySelector('.lightbox-stage img');
   var prevBtn = lightbox.querySelector('[data-dir="prev"]');
   var nextBtn = lightbox.querySelector('[data-dir="next"]');
   var closeBtn = lightbox.querySelector('.lightbox-close');
@@ -17,14 +18,27 @@ document.querySelectorAll('.video-gallery').forEach(function(gallery){
 
   function show(i){
     index = i;
-    var itemVideo = items[i].querySelector('video');
-    var src = itemVideo.querySelector('source').getAttribute('src');
-    var poster = itemVideo.getAttribute('poster');
-    stageSource.setAttribute('src', src);
-    if(poster){ stageVideo.setAttribute('poster', poster); }
-    else{ stageVideo.removeAttribute('poster'); }
-    stageVideo.load();
-    stageVideo.play().catch(function(){});
+    var item = items[i];
+    var itemVideo = item.querySelector('video');
+    var itemImg = item.querySelector('img');
+
+    if(itemVideo){
+      var src = itemVideo.querySelector('source').getAttribute('src');
+      var poster = itemVideo.getAttribute('poster');
+      stageSource.setAttribute('src', src);
+      if(poster){ stageVideo.setAttribute('poster', poster); }
+      else{ stageVideo.removeAttribute('poster'); }
+      stageVideo.load();
+      stageVideo.play().catch(function(){});
+      stageVideo.style.display = '';
+      stageImg.style.display = 'none';
+    } else if(itemImg){
+      stageVideo.pause();
+      stageVideo.style.display = 'none';
+      stageImg.setAttribute('src', itemImg.getAttribute('src'));
+      stageImg.setAttribute('alt', itemImg.getAttribute('alt') || '');
+      stageImg.style.display = '';
+    }
   }
 
   function open(i){
