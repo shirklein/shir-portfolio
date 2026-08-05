@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="he" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>משק עפאים — שיר בן טולילה</title>
+<title>Meshek Ofaim — Shir Ben Tolila</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Miriam+Libre:wght@400;700&display=swap" rel="stylesheet">
@@ -11,53 +11,59 @@
 </head>
 <body>
 
-  <h1><a href="about.html">שיר בן&nbsp;טולילה</a></h1>
+  <h1><a href="about.html">Shir Ben&nbsp;Tolila</a></h1>
 
   <header class="slim">
-    <a class="back-link" href="index.html">→ כל הפרויקטים</a>
+    <a class="back-link" href="index.html" aria-label="Back to Work">→</a>
   </header>
 
   <main>
     <section class="project-section">
-      <div class="project-body">
-        <div class="project-info">
-          <h2 class="project-title">משק עפאים</h2>
-          <span class="counter">1 / 3</span>
-          <p class="project-desc">[טקסט מציין מקום] תיאור קצר על פרויקט משק עפאים ייכנס כאן.</p>
-        </div>
-        <div class="carousel-wrap">
-          <div class="carousel" data-carousel>
-            <button class="nav-btn" data-dir="prev" aria-label="העבודה הקודמת">→</button>
-            <button class="nav-btn" data-dir="next" aria-label="העבודה הבאה">←</button>
-            <div class="carousel-track">
-              <div class="slide is-active">
-                <video controls preload="metadata" playsinline poster="Meshek%20Ofaim/%D7%AA%D7%9E%D7%95%D7%A0%D7%AA%20%D7%A0%D7%95%D7%A9%D7%90.jpg">
-                  <source src="Meshek%20Ofaim/%D7%98%D7%95%D7%A9%D7%99%D7%9D.mp4" type="video/mp4">
-                </video>
-              </div>
-              <div class="slide">
-                <video controls preload="metadata" playsinline poster="Meshek%20Ofaim/%D7%AA%D7%9E%D7%95%D7%A0%D7%AA%20%D7%A0%D7%95%D7%A9%D7%90.jpg">
-                  <source src="Meshek%20Ofaim/%D7%AA%D7%9C%D7%AA+%D7%98%D7%95%D7%A9%D7%99%D7%9D.mp4" type="video/mp4">
-                </video>
-              </div>
-              <div class="slide">
-                <video controls preload="metadata" playsinline poster="Meshek%20Ofaim/%D7%AA%D7%9E%D7%95%D7%A0%D7%AA%20%D7%A0%D7%95%D7%A9%D7%90.jpg">
-                  <source src="Meshek%20Ofaim/%D7%AA%D7%9C%D7%AA.mp4" type="video/mp4">
-                </video>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="project-header">
+        <h2 class="project-title">Meshek Ofaim</h2>
+        <p class="project-desc">Ofaim Farm "Ident" Video (Bezalel course)</p>
+        <p class="project-desc"><strong>The Task:</strong><br>As part of the third-year "Composition in Motion" course in the Visual Communication department at Bezalel Academy of Art and Design, I was asked to choose a beloved brand and create a short "Ident" video expressing its atmosphere and values. I chose Ofaim Farm for Sustainable Agriculture, which grows and prepares all the goodness of the land - fruits, vegetables, eggs, jams, cheeses, breads, oil, and more - through a slow, patient, handcrafted process that honors the animals, the earth, and the people who work it.</p>
+        <p class="project-desc"><strong>My Solution:</strong><br>In the spirit of the farm's values, I chose to work with hand-painted markers, frame by frame. The process included: planning the video's flow through a storyboard; building a three-dimensional environment in Spline; recording a "skeleton" video within that 3D environment; breaking the skeleton video down into individual frames and printing them; manually coloring all 300 frames using markers and a light table; scanning the colored frames; and finally editing everything together in Adobe After Effects.</p>
+      </div>
+      <div class="video-gallery">
+      <button class="gallery-item" type="button">
+        <video preload="metadata" muted playsinline poster="Meshek%20Ofaim/%D7%AA%D7%9E%D7%95%D7%A0%D7%AA%20%D7%A0%D7%95%D7%A9%D7%90.jpg">
+          <source src="Meshek%20Ofaim/%D7%98%D7%95%D7%A9%D7%99%D7%9D.mp4" type="video/mp4">
+        </video>
+        <span class="play-icon">&#9654;</span>
+      </button>
+      <button class="gallery-item" type="button">
+        <video preload="metadata" muted playsinline poster="Meshek%20Ofaim/%D7%AA%D7%9E%D7%95%D7%A0%D7%AA%20%D7%A0%D7%95%D7%A9%D7%90.jpg">
+          <source src="Meshek%20Ofaim/%D7%AA%D7%9C%D7%AA+%D7%98%D7%95%D7%A9%D7%99%D7%9D.mp4" type="video/mp4">
+        </video>
+        <span class="play-icon">&#9654;</span>
+      </button>
+      <button class="gallery-item" type="button">
+        <video preload="metadata" muted playsinline poster="Meshek%20Ofaim/%D7%AA%D7%9E%D7%95%D7%A0%D7%AA%20%D7%A0%D7%95%D7%A9%D7%90.jpg">
+          <source src="Meshek%20Ofaim/%D7%AA%D7%9C%D7%AA.mp4" type="video/mp4">
+        </video>
+        <span class="play-icon">&#9654;</span>
+      </button>
       </div>
     </section>
   </main>
 
+  <div class="lightbox">
+    <button class="lightbox-close" aria-label="Close" type="button">&times;</button>
+    <button class="nav-btn" data-dir="prev" aria-label="Previous work">←</button>
+    <button class="nav-btn" data-dir="next" aria-label="Next work">→</button>
+    <div class="lightbox-stage">
+      <video controls playsinline>
+        <source src="" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
   <footer>
     <div class="contact">
       <a href="mailto:shirklein030@gmail.com">shirklein030@gmail.com</a>
-      <a href="https://instagram.com/shir.klein.92" target="_blank" rel="noopener">אינסטגרם</a>
+      <a href="https://instagram.com/shir.klein.92" target="_blank" rel="noopener">Instagram</a>
     </div>
-    <p class="credit">© 2026 SHIR BEN TOLILA — ALL PRINTS ORIGINAL</p>
   </footer>
 
   <script src="carousel.js"></script>

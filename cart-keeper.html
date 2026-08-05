@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="he" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cart Keeper — שיר בן טולילה</title>
+<title>Cart Keeper — Shir Ben Tolila</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Miriam+Libre:wght@400;700&display=swap" rel="stylesheet">
@@ -11,40 +11,45 @@
 </head>
 <body>
 
-  <h1><a href="about.html">שיר בן&nbsp;טולילה</a></h1>
+  <h1><a href="about.html">Shir Ben&nbsp;Tolila</a></h1>
 
   <header class="slim">
-    <a class="back-link" href="index.html">→ כל הפרויקטים</a>
+    <a class="back-link" href="index.html" aria-label="Back to Work">→</a>
   </header>
 
   <main>
     <section class="project-section">
-      <div class="project-body">
-        <div class="project-info">
-          <h2 class="project-title">Cart Keeper</h2>
-          <p class="project-desc">[טקסט מציין מקום] תיאור קצר על פרויקט Cart Keeper ייכנס כאן.</p>
-        </div>
-        <div class="carousel-wrap">
-          <div class="carousel" data-carousel>
-            <div class="carousel-track">
-              <div class="slide is-active">
-                <video controls preload="metadata" playsinline>
-                  <source src="Cart%20Keeper/%D7%A4%D7%95%D7%A8%D7%9E%D7%98%20%D7%90%D7%A0%D7%9B%D7%99%201920%20%D7%A2%D7%9C%201080.mp4" type="video/mp4">
-                </video>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="project-header">
+        <h2 class="project-title">Cart Keeper</h2>
+        <p class="project-desc">"Cart Keeper" App Marketing Video (BenZakai Studio)</p>
+        <p class="project-desc"><strong>The Task:</strong><br>"Cart Keeper" is an app that allows online store owners to send WhatsApp reminders to customers who started filling a cart but abandoned it before completing their purchase. As part of my work at BenZakai studio, I needed to create a marketing video that would quickly and clearly explain why store owners should download the app.</p>
+        <p class="project-desc"><strong>My Solution:</strong><br>I developed the storyboard concept myself, together with AI, building the video around the app's mascot character - shown reminding shoppers to complete their purchase, and as the figure driving store owners' profit graphs upward with percentage gains. I then animated the character using Gemini and embedded it into After Effects compositions.</p>
+      </div>
+      <div class="video-gallery">
+      <button class="gallery-item" type="button">
+        <video preload="metadata" muted playsinline>
+          <source src="Cart%20Keeper/%D7%A4%D7%95%D7%A8%D7%9E%D7%98%20%D7%90%D7%A0%D7%9B%D7%99%201920%20%D7%A2%D7%9C%201080.mp4" type="video/mp4">
+        </video>
+        <span class="play-icon">&#9654;</span>
+      </button>
       </div>
     </section>
   </main>
 
+  <div class="lightbox">
+    <button class="lightbox-close" aria-label="Close" type="button">&times;</button>
+    <div class="lightbox-stage">
+      <video controls playsinline>
+        <source src="" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
   <footer>
     <div class="contact">
       <a href="mailto:shirklein030@gmail.com">shirklein030@gmail.com</a>
-      <a href="https://instagram.com/shir.klein.92" target="_blank" rel="noopener">אינסטגרם</a>
+      <a href="https://instagram.com/shir.klein.92" target="_blank" rel="noopener">Instagram</a>
     </div>
-    <p class="credit">© 2026 SHIR BEN TOLILA — ALL PRINTS ORIGINAL</p>
   </footer>
 
   <script src="carousel.js"></script>
