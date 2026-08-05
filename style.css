@@ -268,6 +268,20 @@ main:has(.video-gallery){
 }
 .gallery-item:hover .play-icon{ background: rgba(14,13,10,0.4); }
 
+/* expand icon on image items sits in the bottom-left corner instead of centered */
+.gallery-item:has(img) .play-icon{
+  inset:auto;
+  left:12px;
+  bottom:12px;
+  top:auto;
+  right:auto;
+  width:2.2rem;
+  height:2.2rem;
+  font-size:1.1rem;
+  background: none;
+}
+.gallery-item:has(img):hover .play-icon{ background: none; }
+
 /* lightbox */
 .lightbox{
   position:fixed;
