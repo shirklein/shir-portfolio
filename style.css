@@ -188,6 +188,12 @@ main:has(.video-gallery){
 }
 .project-card:hover .card-title{ opacity:1; }
 
+@media (max-width: 640px){
+  .project-grid{
+    grid-template-columns: 1fr;
+  }
+}
+
 .project-section{
   margin-bottom: 8vh;
 }
