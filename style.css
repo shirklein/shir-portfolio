@@ -113,6 +113,11 @@ main:has(.video-gallery){
   padding-top: 2.5vh;
 }
 
+/* on project pages, align the logo with the project title's left edge */
+body:has(.video-gallery) h1{
+  left: 72px;
+}
+
 .section-label{
   font-family: var(--mono);
   font-size: 0.75rem;
@@ -232,8 +237,16 @@ main:has(.video-gallery){
 /* project video gallery */
 .video-gallery{
   display:grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 16px;
+}
+
+.video-gallery.gallery-3col{
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.video-gallery.gallery-2col{
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .gallery-item{
@@ -251,6 +264,9 @@ main:has(.video-gallery){
   display:block;
   width:100%;
   height:auto;
+  max-height:80vh;
+  object-fit:contain;
+  margin:0 auto;
   pointer-events:none;
 }
 .gallery-item .play-icon{
@@ -344,24 +360,28 @@ main:has(.video-gallery){
 .nav-btn[data-dir="next"]{ right:1rem; }
 
 footer{
-  padding: 6vh 6vw 8vh;
+  position:fixed;
+  bottom:24px;
+  right:24px;
+  z-index:50;
+  padding:0;
   display:flex;
   flex-wrap:wrap;
-  justify-content:space-between;
+  justify-content:flex-end;
   align-items:flex-end;
   gap:2rem;
 }
 
 .contact{
   display:flex;
-  flex-direction:column;
-  gap:0.4rem;
+  flex-direction:row;
+  gap:1.5rem;
 }
 .contact a{
   color: var(--ink);
   text-decoration:none;
   font-size: 1.1rem;
-  font-weight:700;
+  font-weight:400;
   border-bottom: 1px solid var(--ink);
   width:fit-content;
 }
