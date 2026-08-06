@@ -43,7 +43,7 @@ header{
 
 header.slim{
   min-height:auto;
-  padding: 14vh 6vw 4vh;
+  padding: 3.5vh 6vw 1vh;
 }
 
 .eyebrow{
@@ -110,6 +110,7 @@ main{
 main:has(.video-gallery){
   padding-left: 72px;
   padding-right: 72px;
+  padding-top: 2.5vh;
 }
 
 .section-label{
@@ -237,7 +238,6 @@ main:has(.video-gallery){
 
 .gallery-item{
   position:relative;
-  aspect-ratio: 3/4;
   overflow:hidden;
   display:block;
   width:100%;
@@ -248,11 +248,9 @@ main:has(.video-gallery){
 }
 .gallery-item video,
 .gallery-item img{
-  position:absolute;
-  inset:0;
+  display:block;
   width:100%;
-  height:100%;
-  object-fit:cover;
+  height:auto;
   pointer-events:none;
 }
 .gallery-item .play-icon{
