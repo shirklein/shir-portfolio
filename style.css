@@ -113,6 +113,12 @@ main:has(.video-gallery){
   padding-top: 2.5vh;
 }
 
+/* about page matches the same side spacing as project pages */
+main:has(.about-body){
+  padding-left: 72px;
+  padding-right: 72px;
+}
+
 /* on project pages, align the logo with the project title's left edge */
 body:has(.video-gallery) h1{
   left: 72px;
