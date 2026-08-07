@@ -204,6 +204,15 @@ body:has(.video-gallery) h1{
   .project-grid{
     grid-template-columns: 1fr;
   }
+
+  main:has(.video-gallery){
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  body:has(.video-gallery) h1{
+    left: 24px;
+  }
 }
 
 .project-section{
@@ -231,13 +240,13 @@ body:has(.video-gallery) h1{
 }
 
 .about-body{
-  max-width:60ch;
+  max-width:50vw;
   display:flex;
   flex-direction:column;
   gap:1rem;
 }
 .about-body .project-desc{
-  font-size:1.05rem;
+  font-size:3.15rem;
 }
 
 /* project video gallery */
