@@ -319,6 +319,12 @@ main:has(.project-grid){
   font-weight:400;
 }
 
+.task-solution p strong{
+  display:inline-block;
+  margin-bottom:0.6em;
+  font-weight:700;
+}
+
 .about-body{
   max-width:50vw;
   display:flex;
