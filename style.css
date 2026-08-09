@@ -148,11 +148,9 @@ main:has(.project-grid){
   gap:1.5rem;
 }
 .site-nav a{
-  font-family: var(--mono);
   font-size:1rem;
   font-weight:400;
-  letter-spacing:0.05em;
-  text-transform:uppercase;
+  letter-spacing:-0.02em;
   color: var(--ink);
   text-decoration:none;
 }
@@ -230,7 +228,7 @@ main:has(.project-grid){
   font-size:1rem;
   letter-spacing:0.08em;
   color: #D0D0D0;
-  font-weight:400;
+  font-weight:525;
   display:inline-block;
   width:fit-content;
   background: #000000;
@@ -258,6 +256,15 @@ main:has(.project-grid){
   }
 
   body:has(.project-grid) h1{
+    left: 24px;
+  }
+
+  main:has(.about-body){
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  body:has(.about-body) h1{
     left: 24px;
   }
 }
@@ -321,6 +328,12 @@ main:has(.project-grid){
 .about-body .project-desc{
   font-size:1rem;
   font-weight:400;
+}
+
+@media (max-width: 640px){
+  .about-body{
+    max-width:100%;
+  }
 }
 
 /* project video gallery */
