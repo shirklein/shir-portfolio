@@ -1046,7 +1046,7 @@ a:focus-visible, button:focus-visible{
   align-items:center;
   gap:2rem;
   margin-top:6vh;
-  padding: 2.5rem 50px;
+  padding: 2.5rem calc(50px + 1.5%);
 }
 
 .project-nav__link{
@@ -1097,7 +1097,7 @@ a:focus-visible, button:focus-visible{
 
 @media (max-width: 700px){
   .project-nav{
-    padding: 2rem 24px;
+    padding: 2rem calc(24px + 1.5%);
     gap:1rem;
   }
   .project-nav__title{ font-size:0.95rem; }
