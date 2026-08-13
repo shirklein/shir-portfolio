@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Save the Date — Shir Ben Tolila</title>
+<link rel="stylesheet" href="https://use.typekit.net/pbp6yge.css">
+<link rel="stylesheet" href="style.css?v=45">
+</head>
+<body>
+
+  <div class="header-backdrop"></div>
+
+  <h1><a href="index.html">Shir Ben&nbsp;Tolila</a></h1>
+
+  <header class="slim">
+    <a class="back-link" href="index.html" aria-label="Back to Work">→</a>
+  </header>
+
+  <main>
+    <section class="project-section">
+      <div class="project-text">
+      <div class="project-header">
+        <h2 class="project-title">Save the Date</h2>
+        <p class="project-desc">A hand-illustrated save-the-date animation.</p>
+      </div>
+      <div class="tags">
+        <span class="tag">Illustration</span>
+        <span class="tag">Frame-by-Frame Animation</span>
+      </div>
+      </div>
+      <div class="video-gallery">
+      <button class="gallery-item gallery-item--sound" type="button">
+        <video autoplay muted loop preload="auto" playsinline poster="posters/save-the-date.jpg">
+          <source src="save%20the%20date/save%20the%20date.mp4" type="video/mp4">
+        </video>
+        <span class="sound-toggle" role="button" tabindex="0" aria-label="Play with sound" aria-pressed="false">
+          <svg class="icon-muted" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="4 9 8 9 13 4 13 20 8 15 4 15 4 9"></polygon><line x1="17" y1="8" x2="22" y2="13"></line><line x1="22" y1="8" x2="17" y2="13"></line></svg>
+          <svg class="icon-unmuted" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><polygon points="4 9 8 9 13 4 13 20 8 15 4 15 4 9"></polygon><path d="M16 8a5 5 0 0 1 0 8"></path><path d="M18.5 5.5a9 9 0 0 1 0 13"></path></svg>
+        </span>
+      </button>
+      </div>
+    </section>
+  </main>
+
+  <div class="lightbox">
+    <button class="lightbox-close" aria-label="Close" type="button">&times;</button>
+    <button class="nav-btn" data-dir="prev" aria-label="Previous work">←</button>
+    <button class="nav-btn" data-dir="next" aria-label="Next work">→</button>
+    <div class="lightbox-stage">
+      <video controls playsinline loop>
+        <source src="" type="video/mp4">
+      </video>
+      <img src="" alt="" style="display:none">
+    </div>
+  </div>
+
+  <nav class="project-nav">
+    <a class="project-nav__link project-nav__link--prev" href="3d-birds.html">
+      <video class="project-nav__thumb" muted playsinline loop preload="metadata" poster="posters/3d-birds.png">
+        <source src="3d%20birds/flamingo.mp4" type="video/mp4">
+      </video>
+      <span class="project-nav__row">
+        <span class="project-nav__arrow">←</span>
+        <span class="project-nav__title">3D Birds</span>
+      </span>
+    </a>
+    <a class="project-nav__link project-nav__link--next" href="darrow.html">
+      <video class="project-nav__thumb" muted playsinline loop preload="metadata" poster="posters/darrow.png">
+        <source src="Darrow/Darrow%20cover.mp4" type="video/mp4">
+      </video>
+      <span class="project-nav__row">
+        <span class="project-nav__title">Darrow</span>
+        <span class="project-nav__arrow">→</span>
+      </span>
+    </a>
+  </nav>
+
+  <script src="carousel.js?v=45"></script>
+
+</body>
+</html>

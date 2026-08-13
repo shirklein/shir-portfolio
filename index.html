@@ -4,21 +4,26 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Shir Ben Tolila — Portfolio</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Miriam+Libre:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://use.typekit.net/pbp6yge.css">
+<link rel="stylesheet" href="style.css?v=45">
 </head>
 <body>
+
+  <div class="header-backdrop"></div>
 
   <h1><a href="index.html">Shir Ben&nbsp;Tolila</a></h1>
 
   <nav class="site-nav">
-    <a href="index.html">Work</a>
+    <a href="index.html" class="is-active">Work</a>
     <a href="about.html">About</a>
   </nav>
 
   <main>
+    <div class="hero">
+      <p class="hero-role">Motion Designer</p>
+      <p class="hero-tagline">Bringing ideas to life through animation, craft and visual storytelling.</p>
+    </div>
+    <h2 class="section-label">Selected Work</h2>
     <div class="project-grid">
       <div class="project-item">
         <a class="project-card" href="darrow.html">
@@ -28,8 +33,9 @@
           <span class="card-title">Darrow</span>
         </a>
         <div class="tags">
-          <span class="tag">Real-World Project</span>
-          <span class="tag">Collage Animation</span>
+          <span class="tag">Motion Design</span>
+          <span class="tag">Animation</span>
+          <span class="tag">Editing & Post-Production</span>
         </div>
       </div>
 
@@ -41,7 +47,6 @@
           <span class="card-title">Drift</span>
         </a>
         <div class="tags">
-          <span class="tag">Student Project</span>
           <span class="tag">Motion Graphics</span>
         </div>
       </div>
@@ -54,9 +59,9 @@
           <span class="card-title">Meshek Ofaim</span>
         </a>
         <div class="tags">
-          <span class="tag">Student Project</span>
-          <span class="tag">Frame-by-Frame Animation</span>
-          <span class="tag">Markers</span>
+          <span class="tag">Brand Ident</span>
+          <span class="tag">Frame-by-Frame</span>
+          <span class="tag">Art Direction</span>
         </div>
       </div>
 
@@ -68,8 +73,9 @@
           <span class="card-title">Hadibur</span>
         </a>
         <div class="tags">
-          <span class="tag">Real-World Project</span>
-          <span class="tag">Collage Animation</span>
+          <span class="tag">Motion Design</span>
+          <span class="tag">Social Content</span>
+          <span class="tag">Editing</span>
         </div>
       </div>
 
@@ -81,8 +87,9 @@
           <span class="card-title">Cart Keeper</span>
         </a>
         <div class="tags">
-          <span class="tag">Real-World Project</span>
-          <span class="tag">AI Animation</span>
+          <span class="tag">Storyboard</span>
+          <span class="tag">Motion Design</span>
+          <span class="tag">AI-assisted Animation</span>
         </div>
       </div>
 
@@ -94,11 +101,14 @@
           <span class="card-title">Kibbutz Sign</span>
         </a>
         <div class="tags">
-          <span class="tag">Student Project</span>
           <span class="tag">Stop Motion</span>
         </div>
       </div>
 
+    </div>
+
+    <h2 class="section-label">Experiments</h2>
+    <div class="project-grid project-grid--row">
       <div class="project-item">
         <a class="project-card" href="music-janers.html">
           <video autoplay muted loop playsinline preload="metadata" poster="posters/music-janers.png">
@@ -107,7 +117,6 @@
           <span class="card-title">Spotify Cover Animations</span>
         </a>
         <div class="tags">
-          <span class="tag">Student Project</span>
           <span class="tag">Frame-by-Frame Animation</span>
         </div>
       </div>
@@ -120,19 +129,32 @@
           <span class="card-title">3D Birds</span>
         </a>
         <div class="tags">
-          <span class="tag">Student Project</span>
           <span class="tag">3D Modeling</span>
+        </div>
+      </div>
+
+      <div class="project-item">
+        <a class="project-card" href="save-the-date.html">
+          <video autoplay muted loop playsinline preload="metadata" poster="posters/save-the-date.jpg">
+            <source src="save%20the%20date/save%20the%20date.mp4" type="video/mp4">
+          </video>
+          <span class="card-title">Save the Date</span>
+        </a>
+        <div class="tags">
+          <span class="tag">Illustration</span>
+          <span class="tag">Frame-by-Frame Animation</span>
         </div>
       </div>
     </div>
   </main>
 
-  <footer>
-    <div class="contact">
-      <a href="mailto:shirklein030@gmail.com">shirklein030@gmail.com</a>
-      <a href="https://instagram.com/shir.klein.92" target="_blank" rel="noopener">Instagram</a>
-    </div>
-  </footer>
+  <script>
+    var toggleScrolled = function(){
+      document.body.classList.toggle('scrolled', window.scrollY > 20);
+    };
+    window.addEventListener('scroll', toggleScrolled);
+    toggleScrolled();
+  </script>
 
 </body>
 </html>

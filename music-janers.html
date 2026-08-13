@@ -4,12 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Spotify Cover Animations — Shir Ben Tolila</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Miriam+Libre:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://use.typekit.net/pbp6yge.css">
+<link rel="stylesheet" href="style.css?v=45">
 </head>
 <body>
+
+  <div class="header-backdrop"></div>
 
   <h1><a href="index.html">Shir Ben&nbsp;Tolila</a></h1>
 
@@ -18,37 +18,53 @@
   </header>
 
   <main>
-    <section class="project-section">
-      <div class="project-header">
-        <p class="project-desc">Spotify Cover Animations</p>
-        <div class="task-solution">
-          <p class="project-desc"><strong>The Task</strong><br>As part of a pastiche course at Bezalel, I was tasked with creating 3 Spotify covers for three different musical genres.</p>
-          <p class="project-desc"><strong>My Solution</strong><br>I chose to express each genre through the pair of shoes that characterizes it - sneakers for hip-hop, boots for country, and heels for tango. I animated each pair of shoes according to the dance style matching its genre, using a drawing technique suited to the energy of that style: the hip-hop cover was drawn with markers, the country cover with ink and brush, and the tango cover with charcoal. All the videos were hand-drawn, frame by frame.</p>
+    <section class="project-section case-study">
+      <div class="project-header-full">
+        <h2 class="case-heading">Three Genres in Motion</h2>
+        <div class="tags">
+          <span class="tag">Frame-by-Frame Animation</span>
+          <span class="tag">Illustration</span>
+          <span class="tag">Mixed Media</span>
         </div>
       </div>
-      <div class="tags">
-        <span class="tag">Student Project</span>
-        <span class="tag">Frame-by-Frame Animation</span>
-      </div>
-      <div class="video-gallery gallery-2col">
-      <button class="gallery-item" type="button">
-        <video preload="metadata" muted playsinline poster="posters/music-janers-1.jpg">
-          <source src="music%20janers/%D7%98%D7%A0%D7%92%D7%95%20%D7%A2%D7%9D%20%D7%9E%D7%95%D7%96%D7%99%D7%A7%D7%94.mp4" type="video/mp4">
-        </video>
-        <span class="play-icon">&#9654;</span>
-      </button>
-      <button class="gallery-item" type="button">
-        <video preload="metadata" muted playsinline poster="posters/music-janers-2.jpg">
-          <source src="music%20janers/%D7%9E%D7%92%D7%A4%D7%99%D7%99%D7%9D%20%D7%A1%D7%95%D7%A4%D7%99.mp4" type="video/mp4">
-        </video>
-        <span class="play-icon">&#9654;</span>
-      </button>
-      <button class="gallery-item" type="button">
-        <video preload="metadata" muted playsinline poster="posters/music-janers-3.jpg">
-          <source src="music%20janers/%D7%98%D7%A1%D7%9812.mp4" type="video/mp4">
-        </video>
-        <span class="play-icon">&#9654;</span>
-      </button>
+
+      <div class="video-gallery">
+
+        <div class="case-block">
+          <div class="case-media">
+            <button class="gallery-item gallery-item--sound" type="button">
+              <video autoplay muted loop preload="auto" playsinline poster="posters/music-janers-1.jpg">
+                <source src="music%20janers/%D7%98%D7%A0%D7%92%D7%95%20%D7%A2%D7%9D%20%D7%9E%D7%95%D7%96%D7%99%D7%A7%D7%94.mp4" type="video/mp4">
+              </video>
+              <span class="sound-toggle" role="button" tabindex="0" aria-label="Play with sound" aria-pressed="false">
+                <svg class="icon-muted" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="4 9 8 9 13 4 13 20 8 15 4 15 4 9"></polygon><line x1="17" y1="8" x2="22" y2="13"></line><line x1="22" y1="8" x2="17" y2="13"></line></svg>
+                <svg class="icon-unmuted" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><polygon points="4 9 8 9 13 4 13 20 8 15 4 15 4 9"></polygon><path d="M16 8a5 5 0 0 1 0 8"></path><path d="M18.5 5.5a9 9 0 0 1 0 13"></path></svg>
+              </span>
+            </button>
+            <button class="gallery-item gallery-item--sound" type="button">
+              <video autoplay muted loop preload="auto" playsinline poster="posters/music-janers-2.jpg">
+                <source src="music%20janers/%D7%9E%D7%92%D7%A4%D7%99%D7%99%D7%9D%20%D7%A1%D7%95%D7%A4%D7%99.mp4" type="video/mp4">
+              </video>
+              <span class="sound-toggle" role="button" tabindex="0" aria-label="Play with sound" aria-pressed="false">
+                <svg class="icon-muted" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="4 9 8 9 13 4 13 20 8 15 4 15 4 9"></polygon><line x1="17" y1="8" x2="22" y2="13"></line><line x1="22" y1="8" x2="17" y2="13"></line></svg>
+                <svg class="icon-unmuted" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><polygon points="4 9 8 9 13 4 13 20 8 15 4 15 4 9"></polygon><path d="M16 8a5 5 0 0 1 0 8"></path><path d="M18.5 5.5a9 9 0 0 1 0 13"></path></svg>
+              </span>
+            </button>
+            <button class="gallery-item gallery-item--sound" type="button">
+              <video autoplay muted loop preload="auto" playsinline poster="posters/music-janers-3.jpg">
+                <source src="music%20janers/%D7%98%D7%A1%D7%9812.mp4" type="video/mp4">
+              </video>
+              <span class="sound-toggle" role="button" tabindex="0" aria-label="Play with sound" aria-pressed="false">
+                <svg class="icon-muted" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="4 9 8 9 13 4 13 20 8 15 4 15 4 9"></polygon><line x1="17" y1="8" x2="22" y2="13"></line><line x1="22" y1="8" x2="17" y2="13"></line></svg>
+                <svg class="icon-unmuted" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><polygon points="4 9 8 9 13 4 13 20 8 15 4 15 4 9"></polygon><path d="M16 8a5 5 0 0 1 0 8"></path><path d="M18.5 5.5a9 9 0 0 1 0 13"></path></svg>
+              </span>
+            </button>
+          </div>
+          <div class="case-caption">
+            <p>For this hand-drawn animation series, I used footwear as a visual shorthand for three musical genres: sneakers for hip-hop, boots for country and heels for tango. Each pair was animated to reflect the movement of its genre, using a different drawing technique to match its energy — markers, ink and brush, and charcoal.</p>
+          </div>
+        </div>
+
       </div>
     </section>
   </main>
@@ -65,14 +81,28 @@
     </div>
   </div>
 
-  <footer>
-    <div class="contact">
-      <a href="mailto:shirklein030@gmail.com">shirklein030@gmail.com</a>
-      <a href="https://instagram.com/shir.klein.92" target="_blank" rel="noopener">Instagram</a>
-    </div>
-  </footer>
+  <nav class="project-nav">
+    <a class="project-nav__link project-nav__link--prev" href="cart-keeper.html">
+      <video class="project-nav__thumb" muted playsinline loop preload="metadata" poster="posters/cart-keeper.png">
+        <source src="Cart%20Keeper/cart%20keeper%20cover.mp4" type="video/mp4">
+      </video>
+      <span class="project-nav__row">
+        <span class="project-nav__arrow">←</span>
+        <span class="project-nav__title">Cart Keeper</span>
+      </span>
+    </a>
+    <a class="project-nav__link project-nav__link--next" href="kibuts-sign.html">
+      <video class="project-nav__thumb" muted playsinline loop preload="metadata" poster="posters/kibuts-sign.jpg">
+        <source src="Kibuts%20sign/kibuts%20cover.mp4" type="video/mp4">
+      </video>
+      <span class="project-nav__row">
+        <span class="project-nav__title">Kibbutz Sign</span>
+        <span class="project-nav__arrow">→</span>
+      </span>
+    </a>
+  </nav>
 
-  <script src="carousel.js"></script>
+  <script src="carousel.js?v=45"></script>
 
 </body>
 </html>

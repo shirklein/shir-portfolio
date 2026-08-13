@@ -1,3 +1,95 @@
+document.querySelectorAll('.gallery-item').forEach(function(item){
+  var video = item.querySelector('video');
+  if(!video || video.hasAttribute('autoplay')) return;
+
+  item.addEventListener('mouseenter', function(){
+    video.play().catch(function(){});
+  });
+  item.addEventListener('mouseleave', function(){
+    video.pause();
+    video.currentTime = 0;
+  });
+});
+
+document.querySelectorAll('.video-gallery--hover-play video[autoplay]').forEach(function(video){
+  var item = video.closest('.gallery-item');
+  video.pause();
+  video.currentTime = 0;
+  if(!item) return;
+
+  item.addEventListener('mouseenter', function(){
+    video.play().catch(function(){});
+  });
+  item.addEventListener('mouseleave', function(){
+    video.pause();
+    video.currentTime = 0;
+  });
+});
+
+document.querySelectorAll('.sound-toggle').forEach(function(toggle){
+  var item = toggle.closest('.gallery-item');
+  var video = item ? item.querySelector('video') : null;
+  var iconMuted = toggle.querySelector('.icon-muted');
+  var iconUnmuted = toggle.querySelector('.icon-unmuted');
+  if(!video) return;
+
+  function setMuted(muted){
+    video.muted = muted;
+    toggle.setAttribute('aria-pressed', String(!muted));
+    toggle.setAttribute('aria-label', muted ? 'Play with sound' : 'Mute sound');
+    iconMuted.style.display = muted ? '' : 'none';
+    iconUnmuted.style.display = muted ? 'none' : '';
+  }
+
+  function toggleSound(e){
+    e.stopPropagation();
+    e.preventDefault();
+    setMuted(!video.muted);
+  }
+
+  toggle.addEventListener('click', toggleSound);
+  toggle.addEventListener('keydown', function(e){
+    if(e.key === 'Enter' || e.key === ' '){
+      toggleSound(e);
+    }
+  });
+});
+
+document.querySelectorAll('.gallery-item--sound video[autoplay]').forEach(function(video){
+  var item = video.closest('.gallery-item--sound');
+  if(!item || !item.parentElement) return;
+  var siblings = Array.from(item.parentElement.children).filter(function(el){
+    return el !== item && el.classList.contains('gallery-item--sound');
+  });
+  if(siblings.length === 0) return;
+
+  item.addEventListener('mouseenter', function(){
+    siblings.forEach(function(sib){
+      var sibVideo = sib.querySelector('video');
+      if(sibVideo) sibVideo.pause();
+    });
+  });
+  item.addEventListener('mouseleave', function(){
+    siblings.forEach(function(sib){
+      var sibVideo = sib.querySelector('video');
+      if(sibVideo) sibVideo.play().catch(function(){});
+    });
+  });
+});
+
+document.querySelectorAll('video.project-nav__thumb').forEach(function(video){
+  var link = video.closest('.project-nav__link');
+  if(!link) return;
+
+  link.addEventListener('mouseenter', function(){
+    video.play().catch(function(){});
+  });
+  link.addEventListener('mouseleave', function(){
+    video.pause();
+    video.currentTime = 0;
+  });
+});
+
 document.querySelectorAll('.video-gallery').forEach(function(gallery){
   var items = Array.from(gallery.querySelectorAll('.gallery-item'));
   var lightbox = document.querySelector('.lightbox');
@@ -16,11 +108,28 @@ document.querySelectorAll('.video-gallery').forEach(function(gallery){
     if(nextBtn) nextBtn.style.display = 'none';
   }
 
+  function muteGallerySound(){
+    gallery.querySelectorAll('.sound-toggle').forEach(function(toggle){
+      var soundItem = toggle.closest('.gallery-item');
+      var soundVideo = soundItem ? soundItem.querySelector('video') : null;
+      if(!soundVideo || soundVideo.muted) return;
+      soundVideo.muted = true;
+      toggle.setAttribute('aria-pressed', 'false');
+      toggle.setAttribute('aria-label', 'Play with sound');
+      var iconMuted = toggle.querySelector('.icon-muted');
+      var iconUnmuted = toggle.querySelector('.icon-unmuted');
+      if(iconMuted) iconMuted.style.display = '';
+      if(iconUnmuted) iconUnmuted.style.display = 'none';
+    });
+  }
+
   function show(i){
     index = i;
     var item = items[i];
     var itemVideo = item.querySelector('video');
     var itemImg = item.querySelector('img');
+
+    muteGallerySound();
 
     if(itemVideo){
       var src = itemVideo.querySelector('source').getAttribute('src');
