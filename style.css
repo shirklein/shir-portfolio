@@ -247,19 +247,31 @@ main:has(.project-grid){
   height:100%;
   object-fit:cover;
 }
-.project-card .card-title{
+.project-card .card-tags{
   position:absolute;
   inset-inline:0;
   top:0;
   padding:1.2rem;
-  color:var(--ink);
-  font-size:1rem;
-  font-weight:400;
   pointer-events:none;
   opacity:0;
   transition: opacity 0.2s ease;
+  display:flex;
+  flex-wrap:wrap;
+  gap:0.4em;
 }
-.project-card:hover .card-title{ opacity:1; }
+.project-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: rgba(255,255,255,0.4);
+  opacity:0;
+  transition: opacity 0.2s ease;
+  pointer-events:none;
+  z-index:1;
+}
+.project-card:hover::before{ opacity:1; }
+.project-card .card-tags{ z-index:2; }
+.project-card:hover .card-tags{ opacity:1; }
 
 .project-item{
   display:flex;
