@@ -1,3 +1,34 @@
+document.querySelectorAll('.frame-row').forEach(function(row){
+  var imgs = Array.from(row.querySelectorAll('img'));
+  if(imgs.length < 2) return;
+
+  var original = imgs.map(function(img){ return img.getAttribute('src'); });
+  var offset = 0;
+  var timer = null;
+
+  function apply(){
+    offset = (offset + 1) % original.length;
+    imgs.forEach(function(img, i){
+      img.src = original[(i + offset) % original.length];
+    });
+  }
+
+  function reset(){
+    offset = 0;
+    imgs.forEach(function(img, i){ img.src = original[i]; });
+  }
+
+  row.addEventListener('mouseenter', function(){
+    if(timer) return;
+    timer = setInterval(apply, 180);
+  });
+  row.addEventListener('mouseleave', function(){
+    clearInterval(timer);
+    timer = null;
+    reset();
+  });
+});
+
 document.querySelectorAll('.gallery-item').forEach(function(item){
   var video = item.querySelector('video');
   if(!video || video.hasAttribute('autoplay')) return;
