@@ -328,6 +328,10 @@ main:has(.project-grid){
     right: 24px;
   }
 
+  .site-nav{
+    right: 24px;
+  }
+
   main:has(.project-grid){
     padding-left: 24px;
     padding-right: 24px;
