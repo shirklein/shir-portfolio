@@ -502,6 +502,14 @@ main:has(.project-grid){
   height:70px;
 }
 
+.quad-arrow--drawings-mobile{
+  display:none;
+  width:60px;
+  height:60px;
+  margin:4px auto 8px;
+  pointer-events:none;
+}
+
 .quad-arrow--hammer{
   left:-47px;
   top:72%;
@@ -542,6 +550,12 @@ main:has(.project-grid){
   }
   .case-media-column{
     height:auto;
+  }
+  .quad-arrow--drawings{
+    display:none;
+  }
+  .quad-arrow--drawings-mobile{
+    display:block;
   }
   .case-media-column .gallery-item{
     flex:none;
