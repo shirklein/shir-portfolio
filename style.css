@@ -611,6 +611,8 @@ main:has(.project-grid){
   .case-caption--handmade p,
   .case-caption--audio p,
   .case-caption--onboarding p,
+  .case-caption--shapes p,
+  .case-caption--motion p,
   .case-caption--sketch p,
   .case-caption--frames p,
   .case-caption--storyboard p,
