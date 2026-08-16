@@ -324,6 +324,10 @@ main:has(.project-grid){
     left: 24px;
   }
 
+  .back-link{
+    right: 24px;
+  }
+
   main:has(.project-grid){
     padding-left: 24px;
     padding-right: 24px;
