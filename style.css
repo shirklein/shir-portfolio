@@ -508,6 +508,7 @@ main:has(.project-grid){
   height:60px;
   margin:4px auto 8px;
   pointer-events:none;
+  transform: rotate(90deg);
 }
 
 .quad-arrow--hammer{
