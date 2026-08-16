@@ -341,6 +341,11 @@ main:has(.project-grid){
   body:has(.about-body) h1{
     left: 24px;
   }
+
+  /* name wraps to two lines on narrow screens; give the hero extra clearance */
+  body:has(.hero) .hero{
+    margin-top: 8.5rem;
+  }
 }
 
 .project-section{
