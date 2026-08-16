@@ -877,6 +877,15 @@ main:has(.project-grid){
   object-fit:cover;
   object-position:top;
 }
+.clean-video-frame{
+  display:block;
+  width:100%;
+  max-height:80vh;
+  margin:0 auto;
+  overflow:hidden;
+  background:#000;
+}
+
 .clean-video{
   display:block;
   width:100%;
@@ -885,6 +894,8 @@ main:has(.project-grid){
   object-fit:contain;
   margin:0 auto;
   background:#000;
+  /* source clips have a thin black edge baked in; zoom slightly to crop it out */
+  transform:scale(1.03);
 }
 
 .gallery-item .play-icon{
