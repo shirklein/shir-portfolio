@@ -29,7 +29,7 @@ document.querySelectorAll('.frame-row').forEach(function(row){
   });
 });
 
-document.querySelectorAll('.gallery-item').forEach(function(item){
+document.querySelectorAll('.gallery-item:not(.gallery-item--sound)').forEach(function(item){
   var video = item.querySelector('video');
   if(!video || video.hasAttribute('autoplay')) return;
 
