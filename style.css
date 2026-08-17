@@ -519,6 +519,14 @@ main:has(.project-grid){
   transform: scaleY(-1);
 }
 
+.quad-arrow--hammer-mobile{
+  display:none;
+  width:60px;
+  height:60px;
+  margin:4px auto 8px;
+  pointer-events:none;
+}
+
 .case-media-column--gap-before{
   margin-left: min(64px, 35%);
 }
@@ -556,6 +564,12 @@ main:has(.project-grid){
     display:none;
   }
   .quad-arrow--drawings-mobile{
+    display:block;
+  }
+  .quad-arrow--hammer{
+    display:none;
+  }
+  .quad-arrow--hammer-mobile{
     display:block;
   }
   .case-media-column .gallery-item{
