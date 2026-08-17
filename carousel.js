@@ -1,4 +1,4 @@
-document.querySelectorAll('.frame-row').forEach(function(row){
+document.querySelectorAll('.frame-row:not(.frame-row--static)').forEach(function(row){
   var imgs = Array.from(row.querySelectorAll('img'));
   if(imgs.length < 2) return;
 
