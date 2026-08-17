@@ -122,7 +122,7 @@ document.querySelectorAll('video.project-nav__thumb').forEach(function(video){
 });
 
 document.querySelectorAll('.video-gallery').forEach(function(gallery){
-  var items = Array.from(gallery.querySelectorAll('.gallery-item'));
+  var items = Array.from(gallery.querySelectorAll('.gallery-item:not(.gallery-item--static)'));
   var lightbox = document.querySelector('.lightbox');
   if(!lightbox || items.length === 0) return;
 

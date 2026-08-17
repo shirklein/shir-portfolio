@@ -831,6 +831,9 @@ main:has(.project-grid){
   padding:0;
   cursor:pointer;
 }
+.gallery-item--static{
+  cursor:default;
+}
 .gallery-item:has(img){
   background:transparent;
 }
