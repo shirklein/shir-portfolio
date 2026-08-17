@@ -565,6 +565,13 @@ main:has(.project-grid){
     height:auto;
     object-fit:contain;
   }
+  .case-media-column--gap-before{
+    margin-left:0;
+  }
+  .case-media-column .gallery-item--large{
+    width:70%;
+    margin:0 auto;
+  }
 }
 
 .case-caption{
