@@ -413,7 +413,7 @@ main:has(.project-grid){
 .case-heading{
   font-size:1.3rem;
   font-weight:600;
-  margin-bottom:0.3rem;
+  margin-bottom:0;
 }
 
 .case-media-intro{
@@ -429,7 +429,7 @@ main:has(.project-grid){
   color: rgba(0,0,0,0.5);
   text-transform:uppercase;
   letter-spacing:0.1em;
-  margin-bottom:1rem;
+  margin-bottom:0;
 }
 
 .case-study .video-gallery{
@@ -455,7 +455,7 @@ main:has(.project-grid){
   grid-row: 2;
   display:flex;
   flex-direction:column;
-  gap:16px;
+  gap:0.5rem;
 }
 
 .case-media-row{
