@@ -444,8 +444,8 @@ main:has(.project-grid){
 }
 
 .case-media{
-  grid-column: 1 / 6;
-  grid-row: 1;
+  grid-column: 1 / 7;
+  grid-row: 2;
   display:flex;
   flex-direction:column;
   gap:16px;
@@ -589,77 +589,18 @@ main:has(.project-grid){
 }
 
 .case-caption{
-  grid-column: 6 / 7;
+  grid-column: 1 / 7;
   grid-row: 1;
   display:flex;
   flex-direction:column;
   justify-content:flex-start;
+  margin-bottom: 1.5rem;
   font-size:1rem;
   line-height:1.6;
   color: var(--ink);
 }
 .case-caption p + p{
   margin-top:1em;
-}
-
-.case-caption--foundation p{
-  margin-top: 94px;
-}
-
-.case-caption--handmade p{
-  margin-top: 46px;
-}
-
-.case-caption--audio p{
-  margin-top: 46px;
-}
-
-.case-caption--onboarding p{
-  margin-top: 46px;
-}
-
-.case-caption--shapes p{
-  margin-top: 46px;
-}
-
-.case-caption--motion p{
-  margin-top: 46px;
-}
-
-.case-caption--sketch p{
-  margin-top: 46px;
-}
-
-.case-caption--frames p{
-  margin-top: 46px;
-}
-
-.case-caption--storyboard p{
-  margin-top: 46px;
-}
-
-.case-caption--kibbutz-map p{
-  margin-top: 46px;
-}
-
-.case-caption--frame-grid p{
-  margin-top: 46px;
-}
-
-@media (max-width: 640px){
-  .case-caption--foundation p,
-  .case-caption--handmade p,
-  .case-caption--audio p,
-  .case-caption--onboarding p,
-  .case-caption--shapes p,
-  .case-caption--motion p,
-  .case-caption--sketch p,
-  .case-caption--frames p,
-  .case-caption--storyboard p,
-  .case-caption--kibbutz-map p,
-  .case-caption--frame-grid p{
-    margin-top:0;
-  }
 }
 
 @media (max-width: 640px){
@@ -670,8 +611,8 @@ main:has(.project-grid){
     grid-template-columns: 1fr;
   }
   .case-caption{
-    margin-top:1.5rem;
-    margin-bottom:1rem;
+    margin-top:0;
+    margin-bottom:1.5rem;
   }
 }
 
