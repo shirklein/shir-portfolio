@@ -417,6 +417,7 @@ main:has(.project-grid){
 }
 
 .case-media-intro{
+  max-width:50%;
   font-size:1rem;
   line-height:1.6;
   color: var(--ink);
@@ -600,6 +601,7 @@ main:has(.project-grid){
   display:flex;
   flex-direction:column;
   justify-content:flex-start;
+  max-width:50%;
   margin-bottom: 1.5rem;
   font-size:1rem;
   line-height:1.6;
@@ -617,8 +619,12 @@ main:has(.project-grid){
     grid-template-columns: 1fr;
   }
   .case-caption{
+    max-width:100%;
     margin-top:0;
     margin-bottom:1.5rem;
+  }
+  .case-media-intro{
+    max-width:100%;
   }
 }
 
