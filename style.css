@@ -407,7 +407,7 @@ main:has(.project-grid){
 
 .project-header-full{
   margin-top:2rem;
-  margin-bottom:1.2rem;
+  margin-bottom:0.5rem;
 }
 
 .case-heading{
