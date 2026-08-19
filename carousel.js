@@ -168,6 +168,7 @@ document.querySelectorAll('.video-gallery').forEach(function(gallery){
     var itemImg = items[i].querySelector('img');
     stageImg.setAttribute('src', itemImg.getAttribute('src'));
     stageImg.setAttribute('alt', itemImg.getAttribute('alt') || '');
+    stageImg.style.display = '';
   }
 
   function open(i){
