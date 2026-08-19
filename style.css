@@ -780,7 +780,7 @@ main:has(.project-grid){
   background:transparent;
 }
 
-.loader-frames img{
+.loader-frames video{
   width:100%;
   height:100%;
   object-fit:cover;
