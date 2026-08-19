@@ -480,12 +480,13 @@ main:has(.project-grid){
 .case-media-row--tall .gallery-item{
   flex:0 0 auto;
   width:auto;
-  height:80vh;
+  height:auto;
 }
 .case-media-row--tall .gallery-item img{
+  display:block;
   width:auto;
-  height:100%;
-  max-height:none;
+  height:auto;
+  max-height:80vh;
   max-width:100%;
   object-fit:contain;
 }
