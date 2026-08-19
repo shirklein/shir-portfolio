@@ -82,7 +82,7 @@ header.slim{
 h1{
   position:fixed;
   top:20px;
-  left:72px;
+  left:100px;
   font-size: 1rem;
   line-height: 1;
   font-weight: 400;
@@ -173,7 +173,7 @@ main:has(.project-grid){
 .site-nav{
   position:fixed;
   top:28px;
-  right:72px;
+  right:100px;
   transform: translateY(-50%);
   z-index:50;
   display:flex;
@@ -193,7 +193,7 @@ main:has(.project-grid){
 .back-link{
   position:fixed;
   top:28px;
-  right:72px;
+  right:100px;
   transform: translateY(-50%);
   display:inline-flex;
   align-items:center;
@@ -1092,7 +1092,7 @@ a:focus-visible, button:focus-visible{
   align-items:center;
   gap:2rem;
   margin-top:6vh;
-  padding: 2.5rem calc(50px + 1.5%);
+  padding: 2.5rem calc(100px + 1.5%);
 }
 
 .project-nav__link{
