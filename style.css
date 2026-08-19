@@ -907,6 +907,11 @@ main:has(.project-grid){
 }
 .gallery-item:hover .play-icon{ background: rgba(14,13,10,0.4); }
 
+.play-icon--video svg{
+  width:60px;
+  height:60px;
+}
+
 /* autoplaying-with-sound-toggle items: no extra darkening on hover */
 .gallery-item--sound:hover .play-icon{ background: rgba(14,13,10,0.15); }
 
