@@ -829,6 +829,12 @@ main:has(.project-grid){
 .gallery-item:has(img){
   background:transparent;
 }
+/* no black letterbox bars behind videos on desktop — let the page background show through instead */
+@media (min-width: 641px){
+  .gallery-item:has(video){
+    background:none;
+  }
+}
 .gallery-item video,
 .gallery-item img{
   display:block;
