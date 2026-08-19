@@ -907,6 +907,8 @@ main:has(.project-grid){
 }
 .gallery-item:hover .play-icon{ background: rgba(14,13,10,0.4); }
 
+.gallery-item.is-playing .play-icon{ display:none; }
+
 .play-icon--video svg{
   width:60px;
   height:60px;
