@@ -791,7 +791,7 @@ main:has(.project-grid){
 .case-media--square .clean-video{
   width:100%;
   height:100%;
-  max-height:100vh;
+  max-height:80vh;
   aspect-ratio:auto;
   object-fit:cover;
   object-position:center;
@@ -837,11 +837,11 @@ main:has(.project-grid){
   pointer-events:none;
 }
 .gallery-item video{
-  max-height:100vh;
+  max-height:80vh;
 }
 
 .case-media-row .gallery-item video{
-  max-height:100vh;
+  max-height:80vh;
 }
 
 /* let a full-width hero image size purely by width, matching the video above it instead of being letterboxed by the 80vh cap */
@@ -857,7 +857,7 @@ main:has(.project-grid){
 .gallery-item--crop-right video{
   width:100%;
   height:100%;
-  max-height:100vh;
+  max-height:80vh;
   object-fit:cover;
   object-position:left center;
 }
@@ -870,7 +870,7 @@ main:has(.project-grid){
 .gallery-item--crop-y video{
   width:100%;
   height:100%;
-  max-height:100vh;
+  max-height:80vh;
   object-fit:cover;
 }
 
@@ -882,7 +882,7 @@ main:has(.project-grid){
 .gallery-item--crop-rafat video{
   width:100%;
   height:100%;
-  max-height:100vh;
+  max-height:80vh;
   object-fit:cover;
 }
 
@@ -894,14 +894,14 @@ main:has(.project-grid){
 .gallery-item--crop-bottom video{
   width:100%;
   height:100%;
-  max-height:100vh;
+  max-height:80vh;
   object-fit:cover;
   object-position:top;
 }
 .clean-video-frame{
   display:block;
   width:100%;
-  max-height:100vh;
+  max-height:80vh;
   margin:0 auto;
   overflow:hidden;
   background:#000;
@@ -911,7 +911,7 @@ main:has(.project-grid){
   display:block;
   width:100%;
   height:auto;
-  max-height:100vh;
+  max-height:80vh;
   object-fit:contain;
   margin:0 auto;
   background:#000;
