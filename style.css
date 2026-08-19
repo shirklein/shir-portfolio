@@ -871,6 +871,12 @@ main:has(.project-grid){
   max-height:80vh;
   object-fit:contain;
 }
+/* no black letterbox behind these — let the page background show through instead */
+.gallery-item--crop-y,
+.gallery-item--crop-rafat,
+.gallery-item--crop-bottom{
+  background:none;
+}
 .clean-video-frame{
   display:block;
   width:100%;
