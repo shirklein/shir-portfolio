@@ -139,21 +139,21 @@ main{
 
 /* project detail pages get extra breathing room from the sides */
 main:has(.video-gallery){
-  padding-left: 80px;
-  padding-right: 80px;
+  padding-left: 100px;
+  padding-right: 100px;
   padding-top: 2.5vh;
 }
 
 /* about page matches the same side spacing as project pages */
 main:has(.about-body){
-  padding-left: 80px;
-  padding-right: 80px;
+  padding-left: 100px;
+  padding-right: 100px;
 }
 
 /* homepage matches the same side spacing as project pages */
 main:has(.project-grid){
-  padding-left: 80px;
-  padding-right: 80px;
+  padding-left: 100px;
+  padding-right: 100px;
 }
 
 .section-label{
