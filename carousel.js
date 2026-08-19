@@ -71,6 +71,7 @@ document.querySelectorAll('.sound-toggle').forEach(function(toggle){
     iconMuted.style.display = muted ? '' : 'none';
     iconUnmuted.style.display = muted ? 'none' : '';
   }
+  video._setMuted = setMuted;
 
   function toggleSound(e){
     e.stopPropagation();
@@ -134,6 +135,8 @@ document.querySelectorAll('.video-gallery').forEach(function(gallery){
     item.addEventListener('click', function(){
       if(itemVideo.paused || itemVideo.ended){
         allGalleryVideos.forEach(function(v){ if(v !== itemVideo) v.pause(); });
+        if(typeof itemVideo._setMuted === 'function'){ itemVideo._setMuted(false); }
+        else { itemVideo.muted = false; }
         itemVideo.play().catch(function(){});
       } else {
         itemVideo.pause();
