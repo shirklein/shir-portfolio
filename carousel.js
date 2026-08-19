@@ -195,3 +195,28 @@ document.querySelectorAll('.video-gallery').forEach(function(gallery){
     if(e.key === 'ArrowRight' && nextBtn) nextBtn.click();
   });
 });
+
+// A video only keeps playing while at least half of it is on screen;
+// scrolling more than half of it out of view pauses it, and it resumes
+// once back in view — but only if it was this observer that paused it,
+// not if the viewer paused it on purpose.
+if('IntersectionObserver' in window){
+  var scrollObserver = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      var video = entry.target;
+      if(entry.intersectionRatio < 0.5){
+        if(!video.paused){
+          video.dataset.pausedByScroll = 'true';
+          video.pause();
+        }
+      } else if(video.dataset.pausedByScroll === 'true'){
+        video.dataset.pausedByScroll = '';
+        video.play().catch(function(){});
+      }
+    });
+  }, { threshold: [0, 0.5, 1] });
+
+  document.querySelectorAll('.video-gallery video').forEach(function(video){
+    scrollObserver.observe(video);
+  });
+}
