@@ -469,12 +469,13 @@ main:has(.project-grid){
 }
 
 /* let each image in the row grow to fill 80% of the screen height, sized by its own aspect ratio
-   rather than being squeezed into a fixed-width column; the row scrolls sideways if that overflows */
+   rather than being squeezed into a fixed-width column; stack them one after another instead of
+   side by side so nothing needs to scroll sideways */
 .case-media-row--tall{
   display:flex;
+  flex-direction:column;
   grid-template-columns:none;
-  overflow-x:auto;
-  align-items:flex-start;
+  align-items:center;
 }
 .case-media-row--tall .gallery-item{
   flex:0 0 auto;
@@ -485,7 +486,7 @@ main:has(.project-grid){
   width:auto;
   height:100%;
   max-height:none;
-  max-width:none;
+  max-width:100%;
   object-fit:contain;
 }
 
