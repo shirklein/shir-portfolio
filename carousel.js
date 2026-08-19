@@ -135,6 +135,7 @@ document.querySelectorAll('.video-gallery').forEach(function(gallery){
     item.addEventListener('click', function(){
       if(itemVideo.paused || itemVideo.ended){
         allGalleryVideos.forEach(function(v){ if(v !== itemVideo) v.pause(); });
+        itemVideo.dataset.pausedByScroll = '';
         if(typeof itemVideo._setMuted === 'function'){ itemVideo._setMuted(false); }
         else { itemVideo.muted = false; }
         itemVideo.play().catch(function(){});
@@ -218,5 +219,12 @@ if('IntersectionObserver' in window){
 
   document.querySelectorAll('.video-gallery video').forEach(function(video){
     scrollObserver.observe(video);
+    // A video (e.g. one whose autoplay only kicks in after the observer's
+    // first check) can start playing without a new intersection change —
+    // re-observing forces a fresh visibility check whenever it starts.
+    video.addEventListener('play', function(){
+      scrollObserver.unobserve(video);
+      scrollObserver.observe(video);
+    });
   });
 }
