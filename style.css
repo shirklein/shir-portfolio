@@ -463,6 +463,22 @@ main:has(.project-grid){
   align-items:stretch;
 }
 
+/* let portrait videos shrink to their own aspect ratio instead of stretching across
+   an even grid column, which would leave empty page-background bars on either side */
+.case-media-row--fit{
+  grid-template-columns: repeat(2, auto);
+  justify-content:center;
+}
+.case-media-row--fit .gallery-item{
+  width:auto;
+  height:100%;
+}
+.case-media-row--fit .gallery-item video{
+  width:auto;
+  height:100%;
+  max-height:90vh;
+}
+
 /* let each image in the row grow to fill 90% of the screen height, sized by its own aspect ratio
    rather than being squeezed into a fixed-width column; stack them one after another instead of
    side by side so nothing needs to scroll sideways */
