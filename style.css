@@ -455,28 +455,13 @@ main:has(.project-grid){
 
 .case-media-row{
   display:grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, auto);
+  justify-content:center;
   gap:16px;
 }
 
 .case-media-row--split{
   align-items:stretch;
-}
-
-/* let portrait videos shrink to their own aspect ratio instead of stretching across
-   an even grid column, which would leave empty page-background bars on either side */
-.case-media-row--fit{
-  grid-template-columns: repeat(2, auto);
-  justify-content:center;
-}
-.case-media-row--fit .gallery-item{
-  width:auto;
-  height:100%;
-}
-.case-media-row--fit .gallery-item video{
-  width:auto;
-  height:100%;
-  max-height:90vh;
 }
 
 /* let each image in the row grow to fill 90% of the screen height, sized by its own aspect ratio
@@ -828,7 +813,9 @@ main:has(.project-grid){
   position:relative;
   overflow:hidden;
   display:block;
-  width:100%;
+  width:fit-content;
+  max-width:100%;
+  margin:0 auto;
   background:none;
   border:none;
   padding:0;
@@ -840,19 +827,13 @@ main:has(.project-grid){
 .gallery-item video,
 .gallery-item img{
   display:block;
-  width:100%;
+  width:auto;
   height:auto;
+  max-width:100%;
   max-height:90vh;
   object-fit:contain;
   margin:0 auto;
   pointer-events:none;
-}
-.gallery-item video{
-  max-height:90vh;
-}
-
-.case-media-row .gallery-item video{
-  max-height:90vh;
 }
 
 /* let a full-width hero image size purely by width, matching the video above it instead of being letterboxed by the 90vh cap */
