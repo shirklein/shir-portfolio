@@ -243,7 +243,7 @@ main:has(.project-grid){
 }
 .project-card:hover{
   box-shadow: 0 24px 48px rgba(0,0,0,0.35);
-  transform: scale(1.1);
+  transform: scale(1.03);
   z-index:3;
 }
 .project-card video{
