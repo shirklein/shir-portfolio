@@ -468,7 +468,7 @@ main:has(.project-grid){
   align-items:stretch;
 }
 
-/* let each image in the row grow to fill 80% of the screen height, sized by its own aspect ratio
+/* let each image in the row grow to fill 90% of the screen height, sized by its own aspect ratio
    rather than being squeezed into a fixed-width column; stack them one after another instead of
    side by side so nothing needs to scroll sideways */
 .case-media-row--tall{
@@ -486,7 +486,7 @@ main:has(.project-grid){
   display:block;
   width:auto;
   height:auto;
-  max-height:80vh;
+  max-height:90vh;
   max-width:100%;
   object-fit:contain;
 }
@@ -794,7 +794,7 @@ main:has(.project-grid){
 .case-media--square .clean-video{
   width:100%;
   height:100%;
-  max-height:80vh;
+  max-height:90vh;
   aspect-ratio:auto;
   object-fit:cover;
   object-position:center;
@@ -840,20 +840,20 @@ main:has(.project-grid){
   display:block;
   width:100%;
   height:auto;
-  max-height:80vh;
+  max-height:90vh;
   object-fit:contain;
   margin:0 auto;
   pointer-events:none;
 }
 .gallery-item video{
-  max-height:80vh;
+  max-height:90vh;
 }
 
 .case-media-row .gallery-item video{
-  max-height:80vh;
+  max-height:90vh;
 }
 
-/* let a full-width hero image size purely by width, matching the video above it instead of being letterboxed by the 80vh cap */
+/* let a full-width hero image size purely by width, matching the video above it instead of being letterboxed by the 90vh cap */
 .gallery-item--wide img{
   max-height:none;
 }
@@ -866,7 +866,7 @@ main:has(.project-grid){
 .gallery-item--crop-right video{
   width:100%;
   height:100%;
-  max-height:80vh;
+  max-height:90vh;
   object-fit:cover;
   object-position:left center;
 }
@@ -877,7 +877,7 @@ main:has(.project-grid){
 .gallery-item--crop-bottom video{
   width:100%;
   height:auto;
-  max-height:80vh;
+  max-height:90vh;
   object-fit:contain;
 }
 /* no black letterbox behind these — let the page background show through instead */
@@ -889,7 +889,7 @@ main:has(.project-grid){
 .clean-video-frame{
   display:block;
   width:100%;
-  max-height:80vh;
+  max-height:90vh;
   margin:0 auto;
   overflow:hidden;
   background:#000;
@@ -899,7 +899,7 @@ main:has(.project-grid){
   display:block;
   width:100%;
   height:auto;
-  max-height:80vh;
+  max-height:90vh;
   object-fit:contain;
   margin:0 auto;
   background:#000;
