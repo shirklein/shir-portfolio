@@ -158,6 +158,24 @@
     };
     window.addEventListener('scroll', toggleScrolled);
     toggleScrolled();
+
+    var projectCards = Array.from(document.querySelectorAll('.project-card'));
+    projectCards.forEach(function(card){
+      card.addEventListener('mouseenter', function(){
+        projectCards.forEach(function(c){
+          var v = c.querySelector('video');
+          if(!v) return;
+          if(c === card){ v.play().catch(function(){}); }
+          else { v.pause(); }
+        });
+      });
+      card.addEventListener('mouseleave', function(){
+        projectCards.forEach(function(c){
+          var v = c.querySelector('video');
+          if(v) v.play().catch(function(){});
+        });
+      });
+    });
   </script>
 
 </body>
