@@ -829,22 +829,13 @@ main:has(.project-grid){
   overflow:hidden;
   display:block;
   width:100%;
-  background:#000;
+  background:none;
   border:none;
   padding:0;
   cursor:pointer;
 }
 .gallery-item--static{
   cursor:default;
-}
-.gallery-item:has(img){
-  background:transparent;
-}
-/* no black letterbox bars behind videos on desktop — let the page background show through instead */
-@media (min-width: 641px){
-  .gallery-item:has(video){
-    background:none;
-  }
 }
 .gallery-item video,
 .gallery-item img{
