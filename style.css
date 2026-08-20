@@ -259,17 +259,6 @@ main:has(.project-grid){
   flex-wrap:wrap;
   gap:0.4em;
 }
-.project-card::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background: rgba(255,255,255,0.4);
-  opacity:0;
-  transition: opacity 0.2s ease;
-  pointer-events:none;
-  z-index:1;
-}
-.project-card:hover::before{ opacity:1; }
 .project-card .card-tags{ z-index:2; }
 .project-card:hover .card-tags{ opacity:1; }
 
