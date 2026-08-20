@@ -239,10 +239,12 @@ main:has(.project-grid){
   overflow:hidden;
   display:block;
   background:#000;
-  transition: box-shadow 0.25s ease;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
 }
 .project-card:hover{
   box-shadow: 0 24px 48px rgba(0,0,0,0.35);
+  transform: scale(1.1);
+  z-index:3;
 }
 .project-card video{
   position:absolute;
