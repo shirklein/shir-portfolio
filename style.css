@@ -242,7 +242,7 @@ main:has(.project-grid){
   transition: box-shadow 0.25s ease;
 }
 .project-card:hover{
-  box-shadow: 0 20px 40px rgba(0,0,0,0.18);
+  box-shadow: 0 24px 48px rgba(0,0,0,0.35);
 }
 .project-card video{
   position:absolute;
