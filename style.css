@@ -437,7 +437,7 @@ main:has(.project-grid){
   grid-template-columns: repeat(6, 1fr);
   column-gap: 1%;
   align-items:stretch;
-  margin-bottom: 6vh;
+  margin-bottom: 15vh;
 }
 .case-block:last-child{ margin-bottom:0; }
 
