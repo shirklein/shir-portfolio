@@ -13,6 +13,7 @@ body{
   font-family: 'helvetica-neue-lt-pro', 'Helvetica Neue', Arial, sans-serif;
   -webkit-font-smoothing:antialiased;
   overflow-x:hidden;
+  text-wrap: pretty;
 }
 
 /* registration cross — print/poster reference */
@@ -239,10 +240,10 @@ main:has(.project-grid){
   overflow:hidden;
   display:block;
   background:#000;
-  transition: box-shadow 0.25s ease, transform 0.25s ease;
+  transition: box-shadow 0.1s ease, transform 0.1s ease;
 }
 .project-card:hover{
-  box-shadow: 0 24px 48px rgba(0,0,0,0.35);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
   transform: scale(1.03);
   z-index:3;
 }
@@ -253,20 +254,11 @@ main:has(.project-grid){
   height:100%;
   object-fit:cover;
 }
-.project-card .card-tags{
-  position:absolute;
-  inset-inline:0;
-  top:0;
-  padding:1.2rem;
-  pointer-events:none;
-  opacity:0;
-  transition: opacity 0.2s ease;
+.card-tags{
   display:flex;
   flex-wrap:wrap;
   gap:0.4em;
 }
-.project-card .card-tags{ z-index:2; }
-.project-card:hover .card-tags{ opacity:1; }
 
 .project-item{
   display:flex;
@@ -398,11 +390,57 @@ main:has(.project-grid){
 /* case-study layout (currently: Meshek Ofaim) */
 .project-section.case-study{
   display:block;
+  padding:0;
 }
 
 .project-header-full{
   margin-top:2rem;
   margin-bottom:0.5rem;
+}
+
+/* three-column case study layout: text in the left third, media across the right two-thirds */
+.case-columns{
+  grid-column: 1 / 7;
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  align-items:start;
+  margin-top:2rem;
+}
+.case-columns__text{
+  grid-column: 1 / 2;
+}
+.case-columns__media{
+  grid-column: 2 / 4;
+  display:flex;
+  flex-direction:column;
+  gap:0.5rem;
+}
+.case-columns__media.video-gallery{
+  grid-row: auto;
+  display:block;
+}
+.case-columns__text .case-caption{
+  grid-column: auto;
+  grid-row: auto;
+  max-width:100%;
+}
+.case-columns__text .case-media-intro{
+  max-width:100%;
+}
+.case-columns__text .case-heading{
+  margin-bottom:0.6rem;
+}
+.case-columns__text .tags{
+  margin-bottom:1.2rem;
+}
+@media (max-width: 640px){
+  .case-columns{
+    display:block;
+  }
+  .case-columns__text{
+    margin-bottom:2.5rem;
+  }
 }
 
 .case-heading{
