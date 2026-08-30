@@ -247,7 +247,8 @@ main:has(.project-grid){
   transform: scale(1.03);
   z-index:3;
 }
-.project-card video{
+.project-card video,
+.project-card img{
   position:absolute;
   inset:0;
   width:100%;
