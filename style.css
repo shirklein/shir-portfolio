@@ -502,6 +502,23 @@ main:has(.project-grid){
   align-items:stretch;
 }
 
+/* stretch a single video to fill the full content width instead of
+   being sized/centered by its own intrinsic aspect ratio */
+.case-media-row--full{
+  grid-template-columns: 1fr;
+}
+.case-media-row--full .gallery-item{
+  width:100%;
+  max-width:100%;
+}
+.case-media-row--full .gallery-item video{
+  width:100%;
+  height:auto;
+  max-height:none;
+  aspect-ratio: 16 / 9;
+  object-fit:cover;
+}
+
 /* let each image in the row grow to fill 90% of the screen height, sized by its own aspect ratio
    rather than being squeezed into a fixed-width column; stack them one after another instead of
    side by side so nothing needs to scroll sideways */
