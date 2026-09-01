@@ -543,6 +543,26 @@ main:has(.project-grid){
   object-fit:contain;
 }
 
+/* stretch every image in this gallery to the full content width,
+   stacked one above another, instead of being sized/centered by
+   each image's own aspect ratio */
+.case-media--full .case-media-row{
+  grid-template-columns: 1fr;
+  justify-content: stretch;
+}
+.case-media--full .gallery-item,
+.case-media--full .case-media-row--tall .gallery-item{
+  width:100%;
+  max-width:100%;
+}
+.case-media--full .gallery-item img,
+.case-media--full .case-media-row--tall .gallery-item img{
+  width:100%;
+  height:auto;
+  max-height:none;
+  object-fit:contain;
+}
+
 .case-media-row--align-start{
   align-items:start;
 }
