@@ -6,8 +6,9 @@
 <title>3D Birds — Shir Ben Tolila</title>
 <link rel="icon" type="image/png" href="Drift/pig.png?v=2">
 <link rel="stylesheet" href="https://use.typekit.net/pbp6yge.css">
-<link rel="stylesheet" href="style.css?v=96">
+<link rel="stylesheet" href="style.css?v=97">
 <script defer src="widow-fix.js"></script>
+<script type="module" src="https://unpkg.com/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
 </head>
 <body>
 
@@ -36,109 +37,16 @@
                 <p>A series of stylized bird characters created in Cinema 4D, exploring 3D modeling, form and character design.</p>
               </div>
             </div>
-            <div class="case-columns__media">
-              <div class="case-media-row case-media-row--triple">
-                <button class="gallery-item" type="button">
-                  <video autoplay muted loop preload="auto" playsinline poster="posters/3d-birds-flamingo.jpg">
-                    <source src="3d%20birds/flamingo.mp4" type="video/mp4">
-                  </video>
-                </button>
-                <button class="gallery-item" type="button">
-                  <video autoplay muted loop preload="auto" playsinline poster="posters/3d-birds-swan.jpg">
-                    <source src="3d%20birds/swan.mp4" type="video/mp4">
-                  </video>
-                </button>
-                <button class="gallery-item" type="button">
-                  <video autoplay muted loop preload="auto" playsinline poster="posters/3d-birds-peacock.jpg">
-                    <source src="3d%20birds/peacock.mp4" type="video/mp4">
-                  </video>
-                </button>
-              </div>
-            </div>
           </div>
         </div>
 
         <div class="case-block">
-          <div class="case-columns">
-            <div class="case-columns__text">
-              <h3 class="case-heading">Flamingo</h3>
-            </div>
+          <div class="case-columns case-columns--full">
             <div class="case-columns__media">
-              <div class="case-media-row case-media-row--triple">
-                <button class="gallery-item" type="button">
-                  <img src="3d%20birds/flamingo1.jpg" alt="" loading="lazy">
-                  <span class="play-icon">&#10530;</span>
-                </button>
-                <button class="gallery-item" type="button">
-                  <img src="3d%20birds/flamingo2.jpg" alt="" loading="lazy">
-                  <span class="play-icon">&#10530;</span>
-                </button>
-                <button class="gallery-item" type="button">
-                  <img src="3d%20birds/flamingo3.jpg" alt="" loading="lazy">
-                  <span class="play-icon">&#10530;</span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="case-block">
-          <div class="case-columns">
-            <div class="case-columns__text">
-              <h3 class="case-heading">Peacock</h3>
-            </div>
-            <div class="case-columns__media">
-              <div class="case-media-row case-media-row--triple">
-                <button class="gallery-item" type="button">
-                  <img src="3d%20birds/peacock1.jpg" alt="" loading="lazy">
-                  <span class="play-icon">&#10530;</span>
-                </button>
-                <button class="gallery-item" type="button">
-                  <img src="3d%20birds/peacock2.jpg" alt="" loading="lazy">
-                  <span class="play-icon">&#10530;</span>
-                </button>
-                <button class="gallery-item" type="button">
-                  <img src="3d%20birds/peacock3.jpg" alt="" loading="lazy">
-                  <span class="play-icon">&#10530;</span>
-                </button>
-              </div>
-              <div class="case-media-row case-media-row--triple">
-                <button class="gallery-item" type="button">
-                  <img src="3d%20birds/peacock4.jpg" alt="" loading="lazy">
-                  <span class="play-icon">&#10530;</span>
-                </button>
-                <button class="gallery-item" type="button">
-                  <img src="3d%20birds/peacock5.jpg" alt="" loading="lazy">
-                  <span class="play-icon">&#10530;</span>
-                </button>
-                <button class="gallery-item" type="button">
-                  <img src="3d%20birds/peacock6.jpg" alt="" loading="lazy">
-                  <span class="play-icon">&#10530;</span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="case-block">
-          <div class="case-columns">
-            <div class="case-columns__text">
-              <h3 class="case-heading">Swan</h3>
-            </div>
-            <div class="case-columns__media">
-              <div class="case-media-row case-media-row--triple">
-                <button class="gallery-item" type="button">
-                  <img src="3d%20birds/swan1.jpg" alt="" loading="lazy">
-                  <span class="play-icon">&#10530;</span>
-                </button>
-                <button class="gallery-item" type="button">
-                  <img src="3d%20birds/swan2.jpg" alt="" loading="lazy">
-                  <span class="play-icon">&#10530;</span>
-                </button>
-                <button class="gallery-item" type="button">
-                  <img src="3d%20birds/swan4.jpg" alt="" loading="lazy">
-                  <span class="play-icon">&#10530;</span>
-                </button>
+              <div class="model-viewer-row">
+                <model-viewer class="model-viewer-frame" src="3d%20birds/Shir%20Klein%20flamingo.gltf" camera-controls auto-rotate environment-image="3d%20birds/kloofendal_overcast_puresky_1k_fill.hdr" shadow-intensity="0.35" shadow-softness="1" exposure="0.8" tone-mapping="commerce" alt="Interactive 3D model of the flamingo character"></model-viewer>
+                <model-viewer class="model-viewer-frame" src="3d%20birds/Shir%20Klein%20swan.gltf" camera-controls auto-rotate environment-image="3d%20birds/kloofendal_overcast_puresky_1k_fill.hdr" shadow-intensity="0.35" shadow-softness="1" exposure="0.8" tone-mapping="commerce" alt="Interactive 3D model of the swan character"></model-viewer>
+                <model-viewer class="model-viewer-frame" src="3d%20birds/peacock1.gltf" camera-controls auto-rotate environment-image="3d%20birds/kloofendal_overcast_puresky_1k_fill.hdr" shadow-intensity="0.35" shadow-softness="1" exposure="0.8" tone-mapping="commerce" alt="Interactive 3D model of the peacock character"></model-viewer>
               </div>
             </div>
           </div>
