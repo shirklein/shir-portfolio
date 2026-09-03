@@ -6,7 +6,7 @@
   --mono: 'ibm-plex-mono', 'Courier New', monospace;
 }
 *{box-sizing:border-box; margin:0; padding:0;}
-html{scroll-behavior:smooth;}
+html{scroll-behavior:smooth; overflow-anchor:none;}
 body{
   background:var(--paper);
   color:var(--ink);
@@ -84,9 +84,11 @@ h1{
   position:fixed;
   top:20px;
   left:100px;
+  font-family: 'big-caslon-fb', serif;
   font-size: 1rem;
   line-height: 1;
-  font-weight: 400;
+  font-weight: 800;
+  font-style: italic;
   letter-spacing: -0.02em;
   z-index:50;
   transition: top 0.3s ease, font-size 0.3s ease, font-weight 0.3s ease, letter-spacing 0.3s ease;
@@ -94,15 +96,20 @@ h1{
 
 /* homepage: name starts big as the hero heading, shrinks into the nav row on scroll */
 body:has(.hero) h1{
-  top:10vh;
-  font-size:3.2rem;
-  font-weight:700;
+  top:2vh;
+  left:2vh;
+  font-size:10rem;
+  font-weight:800;
   letter-spacing:0.02em;
+}
+
+body:has(.hero) .site-nav{
+  right:2vh;
 }
 body:has(.hero).scrolled h1{
   top:20px;
   font-size:1rem;
-  font-weight:400;
+  font-weight:800;
   letter-spacing:-0.02em;
 }
 h1 a{
@@ -153,8 +160,12 @@ main:has(.about-body){
 
 /* homepage matches the same side spacing as project pages */
 main:has(.project-grid){
-  padding-left: 100px;
-  padding-right: 100px;
+  padding-left: 1vh;
+  padding-right: 1vh;
+  padding-bottom: 1vh;
+  display:flex;
+  flex-direction:column;
+  min-height: 100vh;
 }
 
 .section-label{
@@ -215,6 +226,8 @@ main:has(.project-grid){
   max-width:60ch;
   margin-bottom:4rem;
   margin-top:5rem;
+  padding-left:1vh;
+  padding-right:1vh;
 }
 .hero-role{
   font-size:1.1rem;
@@ -236,9 +249,9 @@ main:has(.project-grid){
 }
 .project-card{
   position:relative;
-  aspect-ratio: 1/1;
   overflow:hidden;
   display:block;
+  height: 45vh;
   background:#000;
   transition: box-shadow 0.1s ease, transform 0.1s ease;
 }
@@ -249,22 +262,32 @@ main:has(.project-grid){
 }
 .project-card video,
 .project-card img{
-  position:absolute;
-  inset:0;
-  width:100%;
+  display:block;
+  width:auto;
   height:100%;
-  object-fit:cover;
 }
 .card-tags{
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:100%;
   display:flex;
   flex-wrap:wrap;
   gap:0.4em;
+  margin:0 0 0.6rem;
+  opacity:0;
+  transition: opacity 0.15s ease;
+  z-index:1;
+}
+.project-item:hover .card-tags{
+  opacity:1;
 }
 
 .project-item{
   display:flex;
   flex-direction:column;
   gap:0.6rem;
+  position:relative;
 }
 
 .tags{
@@ -298,9 +321,56 @@ main:has(.project-grid){
   grid-template-columns: repeat(4, 1fr);
 }
 
+.project-grid--single-row{
+  display:flex;
+  align-items: flex-end;
+  overflow-x:auto;
+  gap: 24px;
+  margin-left: -1vh;
+  margin-right: -1vh;
+  margin-top: auto;
+  padding-left: 1vh;
+  padding-right: 1vh;
+  padding-top: 2.2rem;
+}
+.project-grid--single-row .project-item{
+  flex: 0 0 auto;
+}
+
 @media (max-width: 640px){
   .project-grid{
     grid-template-columns: 1fr;
+  }
+
+  .project-grid--single-row{
+    flex-direction: column;
+    align-items: stretch;
+    overflow-x: visible;
+    margin-left: -24px;
+    margin-right: -24px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .project-grid--single-row .project-item{
+    flex: none;
+    width: 100%;
+  }
+  .project-grid--single-row .project-item:has(a[href="drift.html"]){ order: 1; }
+  .project-grid--single-row .project-item:has(a[href="darrow.html"]){ order: 2; }
+  .project-grid--single-row .project-item:has(a[href="meshek-ofaim.html"]){ order: 3; }
+  .project-grid--single-row .project-item:has(a[href="e2i.html"]){ order: 4; }
+  .project-grid--single-row .project-item:has(a[href="kibuts-sign.html"]){ order: 5; }
+  .project-grid--single-row .project-item:has(a[href="music-janers.html"]){ order: 6; }
+  .project-grid--single-row .project-item:has(a[href="diana.html"]){ order: 7; }
+  .project-grid--single-row .project-item:has(a[href="save-the-date.html"]){ order: 8; }
+  .project-grid--single-row .project-item:has(a[href="3d-birds.html"]){ order: 9; }
+  .project-grid--single-row .project-card{
+    height: auto;
+  }
+  .project-grid--single-row .project-card video,
+  .project-grid--single-row .project-card img{
+    width: 100%;
+    height: auto;
   }
 
   main:has(.video-gallery){
@@ -310,6 +380,14 @@ main:has(.project-grid){
 
   body:has(.video-gallery) h1{
     left: 24px;
+  }
+
+  body:has(.hero) h1{
+    left: 0;
+    width: 100vw;
+    font-size: 13.5vw;
+    white-space: nowrap;
+    text-align: center;
   }
 
   .back-link{
@@ -496,6 +574,9 @@ main:has(.project-grid){
   column-gap: 1%;
   align-items:stretch;
   margin-bottom: 15vh;
+}
+.case-block--tight{
+  margin-bottom: 1vh;
 }
 .case-block:last-child{ margin-bottom:0; }
 
