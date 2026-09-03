@@ -378,6 +378,16 @@ main:has(.project-grid){
     padding-right: 24px;
   }
 
+  .model-viewer-row{
+    margin-left: -24px;
+    margin-right: -24px;
+  }
+
+  .model-viewer-row .model-viewer-frame{
+    height: auto;
+    aspect-ratio: 4 / 3;
+  }
+
   body:has(.video-gallery) h1{
     left: 24px;
   }
@@ -550,7 +560,7 @@ main:has(.project-grid){
 
 .model-viewer-row{
   display:grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
   gap:16px;
   margin-top:0.5rem;
 }
