@@ -395,12 +395,21 @@ main:has(.project-grid){
     left: 24px;
   }
 
+  /* mobile: name matches the plain project-page style, no big hero growth */
   body:has(.hero) h1{
+    top: 20px;
     left: 24px;
-    width: calc(100vw - 48px);
-    font-size: 13.5vw;
+    width: auto;
+    font-size: 1rem;
+    font-weight: 300;
     white-space: nowrap;
     text-align: left;
+  }
+  body:has(.hero) h1 em{
+    font-weight: 500;
+  }
+  body:has(.hero).scrolled h1{
+    font-weight: 300;
   }
 
   .back-link{
@@ -435,10 +444,6 @@ main:has(.project-grid){
     left: 24px;
   }
 
-  /* name wraps to two lines on narrow screens; give the hero extra clearance */
-  body:has(.hero) .hero{
-    margin-top: 8.5rem;
-  }
 }
 
 .project-section{
