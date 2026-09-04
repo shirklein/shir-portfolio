@@ -256,6 +256,7 @@ main:has(.project-grid){
   display:block;
   height: 45vh;
   background:#000;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
   transition: box-shadow 0.1s ease, transform 0.1s ease;
 }
 .project-card:hover{
