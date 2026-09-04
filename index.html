@@ -13,11 +13,10 @@
 
   <div class="header-backdrop"></div>
 
-  <h1><a href="about.html">Shir Ben&nbsp;Tolila</a></h1>
+  <h1><a href="about.html">Shir Ben&nbsp;Tolila &middot; <em>Motion &amp; Visual Designer</em></a></h1>
 
   <main>
     <div class="hero">
-      <p class="hero-role">Motion & Visual Designer</p>
       <p class="hero-tagline">Bringing ideas to life through animation, craft and visual storytelling.</p>
     </div>
     <div class="project-grid project-grid--single-row">
@@ -153,6 +152,24 @@
 
     var heroEl = document.querySelector('.hero');
     var nameHeading = document.querySelector('h1');
+    var nameLink = nameHeading ? nameHeading.querySelector('a') : null;
+
+    var fitHeadingToWidth = function(){
+      if(!nameHeading || !nameLink) return;
+      if(document.body.classList.contains('scrolled') || window.innerWidth <= 640){
+        nameHeading.style.fontSize = '';
+        return;
+      }
+      nameHeading.style.fontSize = '';
+      var basePx = parseFloat(getComputedStyle(nameHeading).fontSize);
+      var naturalWidth = nameLink.getBoundingClientRect().width;
+      var leftPx = parseFloat(getComputedStyle(nameHeading).left) || 0;
+      var available = window.innerWidth - (leftPx * 2);
+      if(naturalWidth > 0 && available > 0){
+        nameHeading.style.fontSize = (basePx * (available / naturalWidth)) + 'px';
+      }
+    };
+
     var syncHeroOffset = function(){
       if(!heroEl || !nameHeading) return;
       heroEl.style.marginTop = '';
@@ -160,14 +177,20 @@
       var heroTop = heroEl.getBoundingClientRect().top;
       var naturalTop = heroTop - baseMarginPx;
       var headingBottom = nameHeading.getBoundingClientRect().bottom;
-      var gap = 24;
+      var gap = 0;
       var required = headingBottom + gap - naturalTop;
       heroEl.style.marginTop = Math.max(baseMarginPx, required) + 'px';
     };
-    syncHeroOffset();
-    window.addEventListener('resize', syncHeroOffset);
+
+    var syncHeading = function(){
+      fitHeadingToWidth();
+      syncHeroOffset();
+    };
+    syncHeading();
+    window.addEventListener('resize', syncHeading);
+    window.addEventListener('scroll', syncHeading);
     if(document.fonts && document.fonts.ready){
-      document.fonts.ready.then(syncHeroOffset);
+      document.fonts.ready.then(syncHeading);
     }
 
     var projectRow = document.querySelector('.project-grid--single-row');
