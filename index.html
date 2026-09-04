@@ -156,7 +156,7 @@
 
     var fitHeadingToWidth = function(){
       if(!nameHeading || !nameLink) return;
-      if(document.body.classList.contains('scrolled') || window.innerWidth <= 640){
+      if(document.body.classList.contains('scrolled')){
         nameHeading.style.fontSize = '';
         return;
       }
