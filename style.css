@@ -153,10 +153,12 @@ main:has(.video-gallery){
   padding-top: 2.5vh;
 }
 
-/* about page matches the same side spacing as project pages */
-main:has(.about-body){
-  padding-left: 100px;
-  padding-right: 100px;
+/* about page: name and content pinned close to the left edge */
+body:has(.contact) main{
+  padding-left: 2vh;
+}
+body:has(.contact) h1{
+  left: 2vh;
 }
 
 /* homepage matches the same side spacing as project pages */
@@ -1233,6 +1235,9 @@ footer{
   flex-wrap:wrap;
   gap:2.5rem;
   margin-top:1rem;
+  position:fixed;
+  left:2vh;
+  bottom:2vh;
 }
 .section-label:has(+ .contact){
   margin-bottom: 0.5rem;
