@@ -144,12 +144,6 @@
   </main>
 
   <script>
-    var toggleScrolled = function(){
-      document.body.classList.toggle('scrolled', window.scrollY > 20);
-    };
-    window.addEventListener('scroll', toggleScrolled);
-    toggleScrolled();
-
     var heroEl = document.querySelector('.hero');
     var nameHeading = document.querySelector('h1');
     var nameLink = nameHeading ? nameHeading.querySelector('a') : null;
@@ -188,10 +182,16 @@
     };
     syncHeading();
     window.addEventListener('resize', syncHeading);
-    window.addEventListener('scroll', syncHeading);
     if(document.fonts && document.fonts.ready){
       document.fonts.ready.then(syncHeading);
     }
+
+    var toggleScrolled = function(){
+      document.body.classList.toggle('scrolled', window.scrollY > 20);
+      fitHeadingToWidth();
+    };
+    window.addEventListener('scroll', toggleScrolled);
+    toggleScrolled();
 
     var projectRow = document.querySelector('.project-grid--single-row');
     if(projectRow){
