@@ -103,6 +103,9 @@ body:has(.hero) h1{
   letter-spacing:0.02em;
   white-space:nowrap;
 }
+body:has(.hero) h1 em{
+  font-weight:500;
+}
 .name-break{
   display:none;
 }

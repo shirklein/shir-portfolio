@@ -130,11 +130,16 @@
 
     var fitHeadingToWidth = function(){
       if(!nameHeading || !nameLink) return;
+      var prevTransition = nameHeading.style.transition;
+      nameHeading.style.transition = 'none';
       if(document.body.classList.contains('scrolled') || window.innerWidth <= 640){
         nameHeading.style.fontSize = '';
+        void nameHeading.offsetHeight;
+        nameHeading.style.transition = prevTransition;
         return;
       }
       nameHeading.style.fontSize = '';
+      void nameHeading.offsetHeight;
       var basePx = parseFloat(getComputedStyle(nameHeading).fontSize);
       var naturalWidth = nameLink.getBoundingClientRect().width;
       var leftPx = parseFloat(getComputedStyle(nameHeading).left) || 0;
@@ -142,19 +147,19 @@
       if(naturalWidth > 0 && available > 0){
         nameHeading.style.fontSize = (basePx * (available / naturalWidth)) + 'px';
       }
+      void nameHeading.offsetHeight;
+      nameHeading.style.transition = prevTransition;
     };
 
     var syncHeroOffset = function(){
       if(!heroEl || !nameHeading) return;
       heroEl.style.marginTop = '';
-      if(window.innerWidth <= 640) return;
       var baseMarginPx = parseFloat(getComputedStyle(heroEl).marginTop) || 0;
       var heroTop = heroEl.getBoundingClientRect().top;
       var naturalTop = heroTop - baseMarginPx;
       var headingBottom = nameHeading.getBoundingClientRect().bottom;
-      var gap = 0;
-      var required = headingBottom + gap - naturalTop;
-      heroEl.style.marginTop = Math.max(baseMarginPx, required) + 'px';
+      var required = headingBottom - naturalTop;
+      heroEl.style.marginTop = required + 'px';
     };
 
     var syncHeading = function(){
@@ -163,9 +168,13 @@
     };
     syncHeading();
     window.addEventListener('resize', syncHeading);
+    window.addEventListener('load', syncHeading);
     if(document.fonts && document.fonts.ready){
       document.fonts.ready.then(syncHeading);
     }
+    [300, 800, 1500].forEach(function(delay){
+      setTimeout(syncHeading, delay);
+    });
 
     var toggleScrolled = function(){
       document.body.classList.toggle('scrolled', window.scrollY > 20);
