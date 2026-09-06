@@ -103,6 +103,9 @@ body:has(.hero) h1{
   letter-spacing:0.02em;
   white-space:nowrap;
 }
+.name-break{
+  display:none;
+}
 
 body:has(.hero) .site-nav{
   right:2vh;
@@ -414,14 +417,29 @@ main:has(.project-grid){
     width: auto;
     font-size: 1rem;
     font-weight: 300;
-    white-space: nowrap;
+    white-space: normal;
     text-align: left;
+    line-height: 1.5;
+  }
+  body:has(.hero) h1 .name-break{
+    display: inline;
+  }
+  body:has(.hero) h1 .mid-dot{
+    display: none;
   }
   body:has(.hero) h1 em{
     font-weight: 500;
   }
   body:has(.hero).scrolled h1{
     font-weight: 300;
+    white-space: nowrap;
+    line-height: 1;
+  }
+  body:has(.hero).scrolled h1 .name-break{
+    display: none;
+  }
+  body:has(.hero).scrolled h1 .mid-dot{
+    display: inline;
   }
 
   .back-link{
