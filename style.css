@@ -390,6 +390,12 @@ main:has(.project-grid){
     width: 100%;
     height: auto;
   }
+  .project-grid--single-row .card-tags{
+    position: static;
+    opacity: 1;
+    order: -1;
+    margin: 0 0 0.4rem;
+  }
 
   main:has(.video-gallery){
     padding-left: 24px;
