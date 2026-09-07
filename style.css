@@ -419,6 +419,11 @@ main:has(.project-grid){
     left: 24px;
   }
 
+  .hero{
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   /* mobile: name matches the plain project-page style, no big hero growth */
   body:has(.hero) h1{
     top: 20px;
