@@ -348,13 +348,29 @@ main:has(.project-grid){
 }
 @media (min-width: 641px){
   .project-grid--single-row .project-item:has(a[href="3d-birds.html"]) .project-card{
-    width: 68vh;
+    width: 57vh;
+    height: 34vh;
+    background: var(--paper);
   }
   .project-grid--single-row .project-item:has(a[href="3d-birds.html"]) .project-card video{
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
+  }
+  .project-grid--single-row .project-item:has(a[href="drift.html"]) .project-card,
+  .project-grid--single-row .project-item:has(a[href="darrow.html"]) .project-card,
+  .project-grid--single-row .project-item:has(a[href="e2i.html"]) .project-card{
+    height: 60vh;
+  }
+  .project-grid--single-row .project-item:has(a[href="meshek-ofaim.html"]) .project-card{
+    height: 40vh;
+  }
+  .project-grid--single-row .project-item:has(a[href="kibuts-sign.html"]) .project-card{
+    height: 50vh;
+  }
+  .project-grid--single-row .project-item:has(a[href="diana.html"]) .project-card{
+    height: 30vh;
   }
 }
 
