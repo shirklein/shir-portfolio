@@ -101,10 +101,16 @@ body:has(.hero) h1{
   font-size:100px;
   font-weight:300;
   letter-spacing:0.02em;
-  white-space:nowrap;
+  white-space:normal;
 }
 body:has(.hero) h1 em{
   font-weight:500;
+}
+body:has(.hero) h1 .name-break{
+  display:inline;
+}
+body:has(.hero) h1 .mid-dot{
+  display:none;
 }
 .name-break{
   display:none;
@@ -118,6 +124,13 @@ body:has(.hero).scrolled h1{
   font-size:1rem;
   font-weight:100;
   letter-spacing:-0.02em;
+  white-space:nowrap;
+}
+body:has(.hero).scrolled h1 .name-break{
+  display:none;
+}
+body:has(.hero).scrolled h1 .mid-dot{
+  display:inline;
 }
 h1 a{
   color:inherit;

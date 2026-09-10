@@ -139,9 +139,12 @@
         return;
       }
       nameHeading.style.fontSize = '';
+      var prevWhiteSpace = nameHeading.style.whiteSpace;
+      nameHeading.style.whiteSpace = 'nowrap';
       void nameHeading.offsetHeight;
       var basePx = parseFloat(getComputedStyle(nameHeading).fontSize);
       var naturalWidth = nameLink.getBoundingClientRect().width;
+      nameHeading.style.whiteSpace = prevWhiteSpace;
       var leftPx = parseFloat(getComputedStyle(nameHeading).left) || 0;
       var available = window.innerWidth - (leftPx * 2);
       if(naturalWidth > 0 && available > 0){
